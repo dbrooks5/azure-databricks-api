@@ -11,7 +11,7 @@ from azure_databricks_api.exceptions import APIError, UnknownFormat, \
     AuthorizationError, ERROR_CODES
 
 WorkspaceObjectInfo = namedtuple("ObjectInfo", ['object_type', 'path', 'language', 'object_id'])
-WorkspaceObjectInfo.__new__.__defaults__ = (None,)
+WorkspaceObjectInfo.__new__.__defaults__ = (None,[None,None,None,None])
 
 EXPORT_FORMATS = ['SOURCE', 'JUPYTER', 'DBC', 'HTML']
 LANGUAGES = ['PYTHON', 'R', 'SQL', 'SCALA']
